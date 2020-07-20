@@ -12,6 +12,7 @@ namespace SalesWebMvc2.Models
         public DateTime BirthDate { get; set; }
         public double Salary { get; set; }
         public Department Department { get; set; }
+        public int DepartmentId { get; set; }
         public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
 
         public Seller()
@@ -27,6 +28,7 @@ namespace SalesWebMvc2.Models
             BirthDate = birthDate;
             Salary = salary;
             Department = department;
+
         }
 
         public void AddSales(SalesRecord sr)
