@@ -15,6 +15,8 @@
                 <input type="hidden" asp-for="Seller.Id" />
                 <label asp-for="Seller.Name" class="control-label"></label>
                 <input asp-for="Seller.Name" class="form-control" />
+                <span asp-validation-for="Seller.Name" class="text-danger"></span>
+
             </div>
 
             <div class="form-group">
@@ -24,10 +26,14 @@
             <div class="form-group">
                 <label asp-for="Seller.BirthDate" class="control-label"></label>
                 <input asp-for="Seller.BirthDate" class="form-control" />
+                <span asp-validation-for="Seller.BirthDate" class="text-danger"></span>
+
             </div>
             <div class="form-group">
                 <label asp-for="Seller.Salary" class="control-label"></label>
                 <input asp-for="Seller.Salary" class="form-control" />
+                <span asp-validation-for="Seller.Salary" class="text-danger"></span>
+
             </div>
             <div class="form-group">
                 <label asp-for="Seller.DepartmentId" class="control-label"></label>
@@ -39,3 +45,8 @@
         </form>
     </div>
 </div>
+
+Client-side validation:
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
